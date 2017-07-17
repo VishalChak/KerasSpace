@@ -13,8 +13,6 @@ Created on Sat Jul 15 10:03:58 2017
 
 import pandas as pd
 import keras as kr
-print(kr.__version__)
-
 
 white = pd.read_csv("http://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-white.csv", sep=';')
 
@@ -206,4 +204,6 @@ model.compile(loss='binary_crossentropy',
 model.fit(X_train, y_train,epochs=20, batch_size=1, verbose=1)
 
 y_pred = model.predict(X_test)
+
 y_pred[:5]
+y_test[:5]
